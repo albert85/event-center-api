@@ -4,6 +4,7 @@ exports.up = knex => knex.schema
     table.increments();
     table.string('firstName').notNullable();
     table.string('lastName');
+    table.string('password');
     table.string('email').notNullable().unique();
     table.boolean('isAdmin').defaultTo(false);
     table.timestamp('createdAt').defaultTo(knex.fn.now());

@@ -1,9 +1,11 @@
 import knex from '../../db';
+import helper from '../helpers/response';
 
 class UserController {
   static async getAllUsers(req, res) {
     const user = await knex('users');
-    return res.status(200).json({ ok: true, data: user });
+
+    return helper(res, 'Users successfully retrieved', 200, user);
   }
 }
 

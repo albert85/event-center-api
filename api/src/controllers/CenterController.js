@@ -7,7 +7,7 @@ class CenterController {
       .select([
         'c.id',
         'c.centerName as name',
-        'c.centerAddress', 'u.name',
+        'c.centerAddress',
         'u.firstName',
         'u.lastName',
         'u.email']);
