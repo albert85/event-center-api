@@ -1,8 +1,8 @@
 import express from 'express';
-import { center } from '../controllers';
+import event from '.';
 
 const route = express.Router();
 
-route.get('/centers', center.getAllCenters);
+route.get('/events', event.getAllEvents);
 
 export default route;

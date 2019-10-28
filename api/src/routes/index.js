@@ -1,7 +1,7 @@
 import express from 'express';
-import user from './user';
-import event from './event';
-import center from './center';
+import user from '../users/routes';
+import event from '../events/routes';
+import center from '../centers/routes';
 
 const app = express();
 
