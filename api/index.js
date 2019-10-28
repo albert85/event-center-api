@@ -5,9 +5,12 @@ import validator from 'express-validator';
 import path from 'path';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUiExpress from 'swagger-ui-express';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import dotenv from 'dotenv';
 
 import router from './src/routes';
 
+dotenv.config();
 const app = express();
 
 //  Log request to console
@@ -53,6 +56,8 @@ app.use('/api', router);
 const port = parseInt(process.env.PORT, 10) || 4000;
 app.set('port', port);
 
-app.listen(port, () => console.log('Server is runing on port ', port));
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(port, () => console.log('Server is runing on port ', port));
+}
 
 export default app;
