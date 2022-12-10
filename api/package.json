@@ -32,7 +32,7 @@
     "coveralls": "^3.0.3",
     "cross-env": "^5.2.0",
     "enzyme": "^3.9.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-validator": "^5.3.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.19.5",
